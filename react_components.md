@@ -1,11 +1,5 @@
 # react components
 
-###### installing the required libraries
-
-```
-npm install bootstrap reactstrap react-popper --save
-```
-
 ###### changes 
 
 public->assets->images->put all the images in here
