@@ -1,40 +1,69 @@
 # REACT
 
-**React is a javascript library/framework for building user interfaces.**
+React is a javascript library/framework for building user interfaces.
 
-###### DECLARATIVE
+**DECLARATIVE**
 
 *It hels to design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. This declarative views make your code more predictable and easier to debug.*
 
-###### COMPONENT BASED
+**COMPONENT BASED**
 
 *We can easily build components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.*
 
-###### Learn Once, Write Anywhere
+**Learn Once, Write Anywhere**
 
 *We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using React Native.*
 
-## STEP:1
+###### setup
 
-*install create-react-app* - **npx install -g create-react-app**
-*in any directory in which you wanna create react application* - **create-react-app my-app**
-*react app skeleton will be created*
+install create-react-app globally(via terminal command)
 
-## STEP:2
+```
+npx install -g create-react-app
+```
 
-*Configure your React project to use reactstrap.* - 
+Go to any directory where you wanna create react app(via terminal command), this will make a running react app skeleton.
 
-**npm install bootstrap**
+```
+create-react-app my-app
+```
 
-**npm install reactstrap**
+This will start the react app server and the frontend part will start showing in the browser at port 3000 as **http://localhost:3000**
 
-**npm install react-popper**
+###### configure react app to use reactstrap
 
-*Start using reactstrap components in your application. In index.js file in src folder, import bootstrap*
+install reactstrap(via terminal command)
 
-**import 'bootstrap/dist/css/bootstrap.min.css';**
+```
+npm install bootstrap reactstrap react-popper --save
+```
 
-*Make a modification in app.js file in src folder. Using* **NAVBAR component from reactstrap**
+###### configure react app to use bootstrap
 
-## STEP:3
+**index.js**-add this line of code to import bootstrap.
 
+```
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+###### adding a navigation bar
+
+**App.js**
+
+```
+import { Navbar, NavbarBrand } from 'reactstrap';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Navbar dark color="primary">
+          <div className="container">
+            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+          </div>
+        </Navbar>
+      </div>
+    );
+  }
+}
+```
