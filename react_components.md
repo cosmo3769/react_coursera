@@ -132,3 +132,41 @@ state is declared within the constructor of the class component
 state should only be modified using setState(), when modified the changes will happen to the original state and the information stored in will be modified.
 
 ## props
+
+jsx attributes are passed into a component as a single object
+
+available in the component as props
+
+can pass in multiple attributes
+
+cannot modify props within the component
+
+***parent component having state which is storing information can be passed on to the child component with the use of props in the form of attributes that you are specifying to the jsx statements.***
+
+```
+<Menu dishes={this.state.dishes}/>
+```
+
+Here the dishes are available as props within the Menu Component and can be accessed as this.props.dishes
+
+```
+<Dishdetail dish={this.state.dish} comments={this.state.comments}/>
+```
+
+Here dish is available as props within the Dishdetail Component and can be accessed as this.props.dish and comments as this.props.comments
+
+## Handling Events
+
+It's similar to the way you handle events on DOM elements
+
+use camelCase to specify events
+
+pass function as the event handler
+
+```
+<Card onClick={() => this.onDishSelect(dish)}>
+```
+
+## Lifting state up
+
+sometimes several componets may share the same data, changes to data in one component needs to be reflected to another component, best to move the shared state to a common ancestor component so every component can share the same data at one go
