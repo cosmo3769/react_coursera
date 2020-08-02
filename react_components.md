@@ -1,6 +1,6 @@
 # react components
 
-###### changes 
+## changes 
 
 public->assets->images->put all the images in here
 
@@ -116,3 +116,19 @@ export default App;
 ```
 
 App.css->delete all the code
+
+## state
+
+Each component can store it's own local information in it's state.
+
+private and fully controlled by the component
+
+can be passed as props to children
+
+only class components can have local state
+
+state is declared within the constructor of the class component
+
+state should only be modified using setState(), when modified the changes will happen to the original state and the information stored in will be modified.
+
+## props
