@@ -4,9 +4,9 @@
 
 It can be classified based how theu are used-->
 
-Presentational vs Container
+Presentational(for rendering the view based on the props that they are passed in) vs Container(make use of presentational components and pass props to them and they are responsible for storing the state)
 
-Skinny vs Fat
+Skinny(purely responsible for rendering the view) vs Fat(having a lot more information being tracked there in the form of state)
 
 Dumb vs Smart
 
